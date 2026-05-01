@@ -47,6 +47,11 @@ messageInput.addEventListener("keypress", (e) => {
   }
 });
 
+/*
 socket.on("chat message", (msg) => {
   addMessage(msg);
+});*/
+
+socket.on("chat message", (msg) => {
+ addMessage(`${msg.username}: ${msg.text}`);
 });
